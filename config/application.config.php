@@ -8,6 +8,7 @@ return [
         'Laminas\Db',
         'Application',
         'Inicio',
+        'Api',
     ],
     'module_listener_options' => [
         'module_paths' => [

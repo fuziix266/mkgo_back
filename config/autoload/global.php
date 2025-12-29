@@ -8,7 +8,7 @@ return [
     // Configuración de base de datos
     'db' => [
         'driver' => 'Pdo',
-        'dsn' => 'mysql:dbname=DBNAMEAQUI;host=localhost;charset=utf8',
+        'dsn' => 'mysql:dbname=mkgo;host=localhost;charset=utf8', // Default local
         'username' => 'root',
         'password' => '',
         'driver_options' => [
