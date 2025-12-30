@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Local Configuration Override
+ *
+ * This configuration override file is for overriding environment-specific and
+ * security-sensitive configuration information. Copy this file to `local.php`
+ * and fill in your specific environment details.
+ *
+ * @NOTE: This file is ignored from Git by default.
+ */
+
+return [
+    'db' => [
+        'username' => 'YOUR_USERNAME', // e.g., 'admin'
+        'password' => 'YOUR_PASSWORD', // e.g., 'mkgoadmiin@123'
+        'dsn' => 'mysql:dbname=mkgo;host=62.146.181.70;port=3311;charset=utf8',
+    ],
+];
