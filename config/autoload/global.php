@@ -8,9 +8,10 @@ return [
     // Configuración de base de datos
     'db' => [
         'driver' => 'Pdo',
-        'dsn' => 'mysql:dbname=mkgo;host=localhost;charset=utf8', // Default local
-        'username' => 'root',
-        'password' => '',
+        // Uso de variables de entorno para configuración (Docker/Dokploy) con fallbacks para desarrollo local
+        'dsn' => 'mysql:dbname=' . (getenv('DB_NAME') ?: 'mkgo') . ';host=' . (getenv('DB_HOST') ?: 'localhost') . ';port=' . (getenv('DB_PORT') ?: '3306') . ';charset=utf8',
+        'username' => getenv('DB_USER') ?: 'root',
+        'password' => getenv('DB_PASSWORD') ?: '',
         'driver_options' => [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\'',
         ],
