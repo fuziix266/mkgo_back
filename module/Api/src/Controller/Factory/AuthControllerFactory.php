@@ -3,7 +3,7 @@
 namespace Api\Controller\Factory;
 
 use Api\Controller\AuthController;
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use Laminas\ServiceManager\Factory\FactoryInterface;
 use Laminas\Db\Adapter\Adapter;
 
