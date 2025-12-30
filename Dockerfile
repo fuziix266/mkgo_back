@@ -34,6 +34,11 @@ COPY . /var/www/html
 # Usamos --no-dev para producción y --optimize-autoloader para rendimiento
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
+# Asegurar que el directorio data existe y crear estructura
+RUN mkdir -p /var/www/html/data/cache \
+    && mkdir -p /var/www/html/data/log \
+    && mkdir -p /var/www/html/data/sessions
+
 # Asignar permisos correctos (especialmente para data/ cache)
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/data
